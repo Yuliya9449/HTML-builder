@@ -32,7 +32,7 @@ async function mergeStyles() {
       });
     });
 
-    console.log('files', filesToMergePaths, 'merged successful');
+    // console.log('files', filesToMergePaths, 'merged successful');
   } catch (error) {
     console.log(error);
   }
