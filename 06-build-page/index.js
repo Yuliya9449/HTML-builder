@@ -62,7 +62,7 @@ async function getFullHTML(pathToInputFile, pathToOutputFile, componentsObj) {
       for (const [template, pathToHTMLComponent] of Object.entries(
         componentsObj,
       )) {
-        chunk = chunk.replace(
+        chunk = chunk.replaceAll(
           template,
           await readFilePromise(pathToHTMLComponent),
         );
