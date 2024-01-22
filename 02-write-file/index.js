@@ -16,7 +16,7 @@ async function readlineHandler(answer) {
     if (answer.trim() === 'exit') {
       sayGoodBye();
     } else {
-      await fs.promises.appendFile(pathToFile, `${answer}\n`);
+      writeStream.write(`${answer}\n`);
     }
   } catch (error) {
     console.log(`${error.name}: ${error.message}`);
