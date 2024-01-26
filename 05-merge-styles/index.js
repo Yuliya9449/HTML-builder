@@ -25,7 +25,7 @@ async function mergeStyles() {
       });
 
     // копирование файлов
-    filesToMergePaths.forEach(async (filePath) => {
+    filesToMergePaths.forEach((filePath) => {
       const readStream = fs.createReadStream(filePath, { encoding: 'utf-8' });
       readStream.on('data', (chunk) => {
         writeStream.write(`${chunk}\n`);
